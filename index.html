@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camila Adesivos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(145deg, #ffe6f0, #fff);
+      color: #333;
+    }
+
+    header {
+      background-color: #ff66a3;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      margin: 0 0 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #ff66a3;
+    }
+
+    .buy-btn {
+      background-color: #21c25e;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #1aaa52;
+    }
+
+    footer {
+      background-color: #ffe6f0;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
+    .social a {
+      color: #ff66a3;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .buy-btn {
+        width: 90%;
+        font-size: 16px;
+      }
+
+      .product img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Camila Adesivos</h1>
+    <p>Adesivos personalizados, fofos e criativos para todos os gostos!</p>
+  </header>
+
+  <section class="product-grid">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1590080877777-0a1835a0ed2d?auto=format&fit=crop&w=600&q=80" alt="Kit Adesivos Cute" />
+      <h3>Kit Adesivos Cute</h3>
+      <p>R$25,00</p>
+      <a href="https://picpay.me/Nelsinho.com.br/25" target="_blank" class="buy-btn">Pagar com PicPay</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Adesivos Estéticos" />
+      <h3>Adesivos Estéticos</h3>
+      <p>R$25,00</p>
+      <a href="https://picpay.me/Nelsinho.com.br/25" target="_blank" class="buy-btn">Pagar com PicPay</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=600&q=80" alt="Pacote Planner" />
+      <h3>Pacote Planner</h3>
+      <p>R$25,00</p>
+      <a href="https://picpay.me/Nelsinho.com.br/25" target="_blank" class="buy-btn">Pagar com PicPay</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Camila Adesivos — Feito com 💖</p>
+    <div class="social">
+      <a href="https://instagram.com/camila.adesivos" target="_blank">Instagram</a> |
+      <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a> |
+      <a href="mailto:contato@camilaadesivos.com.br">E-mail</a>
+    </div>
+  </footer>
+
+  <script>
+    // Bloqueia clique direito
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // Bloqueia teclas: F12, Ctrl+Shift+I/J, Ctrl+U
+    document.addEventListener('keydown', e => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+        alert('Esta ação está desabilitada para proteger o conteúdo.');
+      }
+    });
+  </script>
+
+</body>
+</html>
