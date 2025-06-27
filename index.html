@@ -176,20 +176,20 @@
     🚧 Este site está em desenvolvimento! Em breve teremos novas atualizações e muitos adesivos incríveis para você! 💖
   </div>
   <section class="product-grid">
-    <div class="product" onclick="showProduct('Adesivo Floral', 'R$ 5,00', 'Adesivo com estampa floral super delicada.', 'https://via.placeholder.com/300x200.png?text=Floral')">
+    <div class="product" onclick="showProduct('Adesivo Floral', '2500', 'Adesivo com estampa floral super delicada.', 'https://via.placeholder.com/300x200.png?text=Floral')">
       <img src="https://via.placeholder.com/300x200.png?text=Floral" alt="Adesivo Floral">
       <h3>Adesivo Floral</h3>
-      <p>R$ 5,00</p>
+      <p>R$ 25,00</p>
     </div>
-    <div class="product" onclick="showProduct('Adesivo Gatinho', 'R$ 3,00', 'Fofo adesivo com desenho de gatinho.', 'https://via.placeholder.com/300x200.png?text=Gatinho')">
+    <div class="product" onclick="showProduct('Adesivo Gatinho', '2000', 'Fofo adesivo com desenho de gatinho.', 'https://via.placeholder.com/300x200.png?text=Gatinho')">
       <img src="https://via.placeholder.com/300x200.png?text=Gatinho" alt="Adesivo Gatinho">
       <h3>Adesivo Gatinho</h3>
-      <p>R$ 3,00</p>
+      <p>R$ 20,00</p>
     </div>
-    <div class="product" onclick="showProduct('Adesivo Universo', 'R$ 1,00', 'Explore o espaço com nossos adesivos de universo!', 'https://via.placeholder.com/300x200.png?text=Universo')">
+    <div class="product" onclick="showProduct('Adesivo Universo', '3000', 'Explore o espaço com nossos adesivos de universo!', 'https://via.placeholder.com/300x200.png?text=Universo')">
       <img src="https://via.placeholder.com/300x200.png?text=Universo" alt="Adesivo Universo">
       <h3>Adesivo Universo</h3>
-      <p>R$ 1,00</p>
+      <p>R$ 30,00</p>
     </div>
   </section>
   <footer>
@@ -207,32 +207,30 @@
       <h3 id="detail-title">Título</h3>
       <p id="detail-price">Preço</p>
       <p id="detail-desc">Descrição</p>
-      <a id="buy-link" href="" target="_blank" class="buy-btn">Comprar com PicPay</a>
+      <a href="https://mpago.la/1BKDYkL" target="_blank" class="buy-btn">Pagar Agora</a>
     </div>
     <div class="extra-products">
       <h4>Mais produtos que você pode gostar:</h4>
       <div class="product-grid">
-        <div class="product" onclick="showProduct('Adesivo Corações', 'R$ 2,00', 'Adesivo com corações coloridos.', 'https://via.placeholder.com/300x200.png?text=Corações')">
+        <div class="product" onclick="showProduct('Adesivo Corações', '2200', 'Adesivo com corações coloridos.', 'https://via.placeholder.com/300x200.png?text=Corações')">
           <img src="https://via.placeholder.com/300x200.png?text=Corações" alt="Adesivo Corações">
           <h3>Adesivo Corações</h3>
-          <p>R$ 2,00</p>
+          <p>R$ 22,00</p>
         </div>
-        <div class="product" onclick="showProduct('Adesivo Arco-íris', 'R$ 1,00', 'Adesivo com tema de arco-íris vibrante.', 'https://via.placeholder.com/300x200.png?text=Arco-íris')">
+        <div class="product" onclick="showProduct('Adesivo Arco-íris', '2800', 'Adesivo com tema de arco-íris vibrante.', 'https://via.placeholder.com/300x200.png?text=Arco-íris')">
           <img src="https://via.placeholder.com/300x200.png?text=Arco-íris" alt="Adesivo Arco-íris">
           <h3>Adesivo Arco-íris</h3>
-          <p>R$ 1,00</p>
+          <p>R$ 28,00</p>
         </div>
       </div>
     </div>
   </div>
   <script>
-    function showProduct(title, price, desc, img) {
+    function showProduct(title, amount, desc, img) {
       document.getElementById('detail-title').innerText = title;
-      document.getElementById('detail-price').innerText = price;
+      document.getElementById('detail-price').innerText = 'R$ ' + (amount / 100).toFixed(2).replace('.', ',');
       document.getElementById('detail-desc').innerText = desc;
       document.getElementById('detail-img').src = img;
-      const valor = price.replace('R$', '').replace(',', '.').trim();
-      document.getElementById('buy-link').href = `https://picpay.me/Nelsinho.com.br/${valor}`;
       document.getElementById('product-detail').classList.add('open');
       window.scrollTo(0,0);
     }
